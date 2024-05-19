@@ -23,5 +23,5 @@ const authService = baseApi.injectEndpoints({
 export const { useLoginMutation, useMeQuery } = authService
 
 type LoginResponseType = {
-   accessToken: string
+   data: { accessToken: string }
 }
