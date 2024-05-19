@@ -1,4 +1,6 @@
 import React from 'react'
+import '@fontsource-variable/inter'
+import './styles/index.scss'
 
 import { createRoot } from 'react-dom/client'
 
