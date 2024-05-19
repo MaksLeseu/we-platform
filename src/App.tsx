@@ -1,9 +1,9 @@
-import { Auth } from '@/features/Auth/Auth'
+import { Router } from '@/routes/Routes'
 
 function App() {
    return (
       <div>
-         <Auth />
+         <Router />
       </div>
    )
 }
