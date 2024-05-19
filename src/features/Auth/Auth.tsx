@@ -11,7 +11,6 @@ export const Auth = () => {
       handleSubmit,
       formState: { errors },
    } = useForm<FromValue>()
-   console.log('errors: ', errors)
 
    const onSubmit = (data: FromValue) => {
       console.log(data)
