@@ -27,6 +27,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "prettier-config-maxr2d2": "^1.0.0",
+    "react-hook-form": "^7.51.4",
     "sass": "^1.76.0",
     "stylelint": "^16.5.0",
     "stylelint-config-maxr2d2": "^1.0.0",
