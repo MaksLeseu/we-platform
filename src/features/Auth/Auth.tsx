@@ -1,10 +1,10 @@
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 
+import { setTokenToLocalStorage } from '@/common/utils/functions/localStorage/localStorage'
 import { LoginType } from '@/common/utils/types/common-types'
 import { useLoginMutation } from '@/features/Auth/auth.service'
 import { BASE_ROUTE } from '@/routes/Routes'
-import { setTokenToLocalStorage } from '@/common/utils/functions/localStorage/localStorage'
 
 export const Auth = () => {
    const {
@@ -18,9 +18,15 @@ export const Auth = () => {
    const onSubmit = async (data: LoginType) => {
       try {
          const res = await login(data)
-         const token = res.data?.accessToken
-         setTokenToLocalStorage(token)
-         navigate(`${BASE_ROUTE}`)
+
+         if ('data' in res) {
+            const token: string = res.data.accessToken
+
+            setTokenToLocalStorage(token)
+            navigate(`${BASE_ROUTE}`)
+         } else if ('error' in res) {
+            console.log(res.error)
+         }
       } catch (err) {
          console.log(err)
       }
