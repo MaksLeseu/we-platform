@@ -1,5 +1,11 @@
+import { Auth } from '@/features/Auth/Auth'
+
 function App() {
-   return <div>Hello World!</div>
+   return (
+      <div>
+         <Auth />
+      </div>
+   )
 }
 
 export default App
